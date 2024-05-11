@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "able-coast-422816-v5",
+  "private_key_id": "f9e9bb73f6565a50d92a56d0b19fe8898c0608ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3wzPSBaRMIHsQ\n3alIN6ajSnfJiM1wfKJcflY3zBqV0o3Xi0Lbe6kvTk0k86NPwSmEWGCegHtz6vxt\n84UDczBxIYM5ljnzcp5f1EJVqN2pUc/GT2MQPaHTbgIWUg2/l5kxGSgsJTCLEsxG\nuPYQpWo/XQnS+JSXchrky3f8l2lElQwtdlM+7Ymx37WdPgmjkBuQ2lXtTcmrUxUk\nMTquZu7iK4VxmqKI5W3Nxj7//jB+56p+SnnOyjN9Q3xWBdhpV9TVNNEhQBGLsfvX\nrqBrahTP7QjhoZrSWkq29Bl3n4y7Xhj6giDkjxb4QZdV1nhjqBk+b//hE2aLxvvR\nyTQAyuJpAgMBAAECggEAElsm6YNTwqD5+hjSSJr6g9Qz/Ac00lg41blu/lreivnB\n3naUQp1rLIULUrYdqaFXdtdnK14VNuKRvZ/2OP6AJ8TbuVxmxIk+Bb+LssfQAJJi\nCWKzuBMX/6k8/yLKKcnIbS2gpCxA2ZuSmTvvpIEJiHPQP+lB2pD028bxYON1CfsX\noS0bh1LNzY7MWLuT7seEaKePjVcmQxloIEuAiX/uR6FZ3s2IZ4/f6o6UhOhDcAk7\nQvsabcmahP0ONro6PB8FVk5+LVIFTXqyJ4wfL24nDZYu+KlTE+Xkx5ydCEN1GR/P\n/aFoyzt9JkhqnooUP3Gof93WItoK4h73OQdQU9bg0wKBgQD+Ai6rgJTd1p0yq1l3\nd1qltD7H9DTXgUvfaUfvVRodX9vyvGl0WPpQLy/53FabwRmkNbCCKqXTDL2Zhpb7\nqJlqExcjcoxQBFEnhwG2E2C9KtKyxFvZ93lI3t/u/oVN6s38P/mqqfD/y5FQbH0C\nWhTedEBycBMQz0hvpRGFaAjGtwKBgQC5NAe19frGjQvOupn91X7pWeudHEiwYUvZ\ng1GX9Icw5yg7yowSUj3Xx+bDs+HBbTP6lTuSXSVcpIyQo9BaKwpXO20F2gXLDQTo\ne9Yfcj47euZEF9NIt1VvW2Wnogu0KkrkYXnC6Hd6pY8jswZpIcPg2P5MwS3I/dMt\nNW+8FPd/3wKBgHLp59U88Zw+6JUwwePzQjYvCiwJxhIs83daOOoEtTDO2kHBjW/O\nhUfbYTgHv8LtJD2O8JCi3KxTWj9njUzC5M0BX/lwbBwTJ+fbAyItOBm8kt+/R9Kf\nS+Z0thh4WzR54sCY7MmR4m7G2LHqss9qk4BkVXewTl/PdvTTV87j1vyXAoGAIQPw\nd/SgvvJ372N+fiyoEitQgFKBdsfxgJYTXpZd307l8jq6W63Djor5TVvs29F+2aXu\n17m5JlnDISnCw8A2eLSES+3A6KCqhlNFKZfxFiNjlzH0HVtpZI+TgJ23nmeHsEzc\nKu3MFtYavU91zhoR1Cx6sO4jHlh5Y+7Ju2q1cFsCgYEAzZB4ztaOsSkRKZesbN9n\ndWAKRixRE0r69eFcZ5ZxUyWMtEOYnN2/vbiP64UywJNClwSVvU0Hb1nfwagvtaI1\nzMoVpaYm0K9HLs6PWihSOftAlFPb+wlOLFafdgNibPMqmI9vZ09TV/KPNHCXjxwI\nRLoV99FSjhJkVcW0WqyyC3Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mediastore@able-coast-422816-v5.iam.gserviceaccount.com",
+  "client_id": "105744929594165846286",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mediastore%40able-coast-422816-v5.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

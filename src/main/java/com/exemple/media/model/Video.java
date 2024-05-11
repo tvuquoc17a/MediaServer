@@ -12,37 +12,17 @@ public class Video {
 
     @Column(name = "name")
     private String name;
-    @Column(name = "filePath")
-    private String filePath;
-    private String shareLink;
 
-    @Lob
-    private byte[] data;
+    @Column(name = "url")
+    private String url;
 
     public Video() {}
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Video(long id, String name, String filePath, String shareLink) {
+    public Video(long id, String name, String url) {
         this.id = id;
         this.name = name;
-        this.filePath = filePath;
-        this.shareLink = shareLink;
+        this.url = url;
     }
-    public byte[] getData() {
-        return data;
-    }
-
-    public void setData(byte[] data) {
-        this.data = data;
-    }
-
-
 
     public long getId() {
         return id;
@@ -52,13 +32,28 @@ public class Video {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "Video{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", filePath='" + filePath + '\'' +
-                ", shareLink='" + shareLink + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }
