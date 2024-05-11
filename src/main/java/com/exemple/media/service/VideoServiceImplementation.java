@@ -3,6 +3,8 @@ package com.exemple.media.service;
 import com.exemple.media.model.Video;
 import com.google.cloud.storage.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.exemple.media.repository.VideoRepository;
@@ -26,7 +28,8 @@ public class VideoServiceImplementation implements IVideoService {
     }
 
     @Override
-    public Video saveVideo(Video video, MultipartFile file) {
+    public Video saveVideo(MultipartFile file) {
+        Video video = new Video();
         try {
             String bucketName = "nhom14landscape";
             BlobInfo blobInfo = BlobInfo.newBuilder(bucketName, file.getOriginalFilename()).build();
@@ -35,6 +38,8 @@ public class VideoServiceImplementation implements IVideoService {
             BlobId blobId = BlobId.of(bucketName, file.getOriginalFilename());
             storage.createAcl(blobId, Acl.of(Acl.User.ofAllUsers(), Acl.Role.READER));
 
+
+            video.setName(file.getOriginalFilename());
             video.setUrl(blob.getMediaLink());
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,5 +51,10 @@ public class VideoServiceImplementation implements IVideoService {
     @Override
     public List<Video> getAllVideo() {
         return videoRepository.findAll();
+    }
+
+    @Override
+    public Page<Video> getVideoPage(Pageable pageable) {
+        return videoRepository.findAll(pageable);
     }
 }

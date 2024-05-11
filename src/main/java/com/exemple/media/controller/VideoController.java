@@ -20,6 +20,6 @@ public class VideoController {
 
     @PostMapping("/upload")
     public Video uploadVideo(@RequestPart("file") MultipartFile file, @RequestPart("video") Video video){
-        return iVideoService.saveVideo(video, file);
+        return iVideoService.saveVideo( file);
     }
 }

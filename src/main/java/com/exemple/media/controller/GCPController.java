@@ -4,12 +4,16 @@ import com.exemple.media.model.Video;
 import com.exemple.media.service.IVideoService;
 import com.google.cloud.storage.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -35,15 +39,20 @@ public class GCPController {
     }
 
     @PostMapping("/upload")
-    public ResponseEntity<String> uploadVideo(@RequestParam("file") MultipartFile file, @RequestParam("name") String name){
-        Video video = new Video();
-        video.setName(name);
-        Video saveVideo = iVideoService.saveVideo(video, file);
-        if(saveVideo != null){
-            return ResponseEntity.ok(saveVideo.getUrl());
-        }else {
-            return ResponseEntity.status(500).build();
+    public ResponseEntity<List<String>> uploadVideo(@RequestParam("file") MultipartFile[] files){
+        List<String> list = new ArrayList<String>();
+        System.out.println(files.length);
+        for( MultipartFile file : files){
+            Video savedVideo = iVideoService.saveVideo(file);
+            list.add(savedVideo.getUrl());
         }
+        return ResponseEntity.ok(list);
+
+//        if(saveVideo != null){
+//            return ResponseEntity.ok(saveVideo.getUrl());
+//        }else {
+//            return ResponseEntity.status(500).build();
+//        }
     }
 
     @GetMapping("/display")
@@ -58,4 +67,10 @@ public class GCPController {
         return iVideoService.getAllVideo();
     }
 
+    @GetMapping("/get-videos")
+    @ResponseBody
+    public Page<Video> getVideos(@RequestParam int page, @RequestParam int size){
+        Pageable pageable = PageRequest.of(page, size);
+        return iVideoService.getVideoPage(pageable);
+    }
 }
